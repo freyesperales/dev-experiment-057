@@ -1,0 +1,10 @@
+# The sample zoneinfo trees are compiled TZif binaries. A CRLF conversion would
+# corrupt them silently, so mark them binary explicitly rather than relying on
+# git's NUL-byte heuristic.
+samples/trees/** binary
+samples/trees/+VERSION text eol=lf
+
+# Everything else is text with LF endings, including the Makefile, whose recipe
+# lines must keep their tabs.
+* text=auto eol=lf
+Makefile text eol=lf
